@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\VScode\gettingstarted\WEB\UnitConverter\static\styles.css">
+    <title>Length Converter</title>
+</head>
+<body>
+    <form target="_self" action="/convert_length" method="post">
+        <label for="length">Enter the Length:</label><br>
+        <input type="number" id="length" name="length" required><br>
+
+        <label for="from_unit">From:</label><br>
+        <select id="from_unit" name="from_unit" required>
+            <option value="meters">Meters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="miles">Miles</option>
+            <option value="inches">Inches</option>
+            <!-- Add more units as needed -->
+        </select><br>
+
+        <label for="to_unit">To:</label><br>
+        <select id="to_unit" name="to_unit" required>
+            <option value="meters">Meters</option>
+            <option value="kilometers">Kilometers</option>
+            <option value="miles">Miles</option>
+            <option value="inches">Inches</option>
+            <!-- Add more units as needed -->
+        </select><br>
+
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if converted_value %}
+    <div class="result">
+        <h2>Conversion Result</h2>
+        <p>The converted value is: {{ converted_value }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
