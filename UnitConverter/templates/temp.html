@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <form target="content-frame" action="/convert_temp" method="post" class = "form-content">
+        <label for="temp">Enter the Temperature:</label><br>
+        <input type="float" id="temp" name="temp" required><br>
+
+        <label for="from_unit">From:</label><br>
+        <select id="from_unit" name="from_unit" required>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <!-- Add more units as needed -->
+        </select><br>
+
+        <label for="to_unit">To:</label><br>
+        <select id="to_unit" name="to_unit" required>
+            <option value="celsius">Celsius</option>
+            <option value="fahrenheit">Fahrenheit</option>
+            <option value="kelvin">Kelvin</option>
+            <!-- Add more units as needed -->
+        </select><br>
+
+        <input class="button"type="submit" value="Convert">
+    </form>
+
+    {% if converted_value %}
+    <div class="result">
+        <h2>Conversion Result</h2>
+        <p>The converted value for <b>{{input_temp}} {{from_unit}} </b>is: <b>{{converted_value}} {{to_unit}}</b></p>
+    </div>
+    {% endif %}
+</body>
+</html>
