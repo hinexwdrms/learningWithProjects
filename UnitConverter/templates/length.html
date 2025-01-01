@@ -7,9 +7,9 @@
     <title>Length Converter</title>
 </head>
 <body>
-    <form target="content-frame" action="/convert_length" method="post">
+    <form target="content-frame" action="/convert_length" method="post" class = "form-content">
         <label for="length">Enter the Length:</label><br>
-        <input type="number" id="length" name="length" required><br>
+        <input type="float" id="length" name="length" min = 0 required><br>
 
         <label for="from_unit">From:</label><br>
         <select id="from_unit" name="from_unit" required>
@@ -29,13 +29,13 @@
             <!-- Add more units as needed -->
         </select><br>
 
-        <input type="submit" value="Convert">
+        <input class="button" type="submit" value="Convert">
     </form>
 
     {% if converted_value %}
     <div class="result">
         <h2>Conversion Result</h2>
-        <p>The converted value is: {{converted_value}}</p>
+        <p>The converted value for <b>{{input_length}} {{from_unit}}</b> is: <b>{{converted_value}} {{to_unit}}</b></p>
     </div>
     {% endif %}
 </body>

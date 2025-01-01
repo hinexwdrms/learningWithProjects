@@ -7,9 +7,9 @@
     <title>Weight Converter</title>
 </head>
 <body>
-    <form target="_self" action="/convert_weight" method="post">
+    <form target="content-frame" action="/convert_weight" method="post" class = "form-content">
         <label for="weight">Enter the Weight:</label><br>
-        <input type="number" id="weight" name="weight" required><br>
+        <input type="float" id="weight" name="weight" min = 0 required><br>
 
         <label for="from_unit">From:</label><br>
         <select id="from_unit" name="from_unit" required>
@@ -23,7 +23,7 @@
 
         <label for="to_unit">To:</label><br>
         <select id="to_unit" name="to_unit" required>
-            <option value="kilogram">Kilograms</option>
+            <option value="kilograms">Kilograms</option>
             <option value="grams">Grams</option>
             <option value="milligrams">Milligrams</option>
             <option value="ounces">Ounces</option>
@@ -31,13 +31,13 @@
             <!-- Add more units as needed -->
         </select><br>
 
-        <input type="submit" value="Convert">
+        <input class="button" type="submit" value="Convert">
     </form>
 
     {% if converted_value %}
     <div class="result">
         <h2>Conversion Result</h2>
-        <p>The converted value is: {{converted_value}}</p>
+        <p>The converted value for <b>{{input_weight}} {{from_unit}} </b>is: <b>{{converted_value}} {{to_unit}}</b></p>
     </div>
     {% endif %}
 </body>

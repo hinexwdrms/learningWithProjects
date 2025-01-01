@@ -4,7 +4,7 @@
     margin: 0; /* Remove default margin */
     display: flex; /* Align items horizontally */
     justify-content: center; /* Center the links */
-    background-color: #333; /* Background color of the navbar */
+    background-color: #333333; /* Background color of the navbar */
 }
 
 .nav-links li {
@@ -32,10 +32,56 @@ iframe {
     margin: 0 auto;
 }
 
-form {
+.form-content{
+    margin-top: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+label{
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
     margin-top: 20px;
 }
+
+input, select{
+    padding: 5px;
+    margin-top: 0px;
+    width: 25%;
+}
+
+.button{
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #555;
+}
+
+.result{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.result h2{
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #ffffff;
+    padding: 10px;
+    margin-left: 20vh;
+    margin-right: 20vh;
+}
+
+.result p{
+    font-family: Arial, sans-serif;
+}
+
+

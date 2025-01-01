@@ -63,21 +63,3 @@ weight_dict = {
         'ounces': 1
     }
 }
-
-temp_dict = {
-    'celsius': {
-        'celsius': 1,
-        'fahrenheit': 33.8,
-        'kelvin': 274.15
-    },
-    'fahrenheit': {
-        'celsius': -17.2222,
-        'fahrenheit': 1,
-        'kelvin': 255.928
-    },
-    'kelvin': {
-        'celsius': -272.15,
-        'fahrenheit': -457.87,
-        'kelvin': 1
-    }
-}
