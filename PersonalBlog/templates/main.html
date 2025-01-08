@@ -8,16 +8,22 @@
 <body>
     <nav class="nav-links">
         <ul class="menu">
-            <li><a href="/home" target="content-frame">Home</a></li>
-            <li><a href="/about" target="content-frame">About</a></li>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
         </ul>
         <h1 class="heading">Personal Blog</h1>
         <ul class="login">
-            <li><a href="/login" target="content-frame">Login</a></li>
+            {% if logged_in %}
+                <a href="{{url_for('logout')}}">Logout</a>
+            {% else %}
+                <a href="/login">Login</a>
+            {% endif %}
         </ul>
     </nav>
     <div class="main-content">
-        <iframe name="content-frame" src="/about"></iframe>
+        {% block content %}
+        <!-- Content specific to each page will go here -->
+        {% endblock %}
     </div>
     <footer class="main-footer">
         <ul>
