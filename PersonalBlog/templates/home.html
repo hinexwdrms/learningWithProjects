@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
 </head>
 <body>
+    {% extends "main.html" %}
+
+    {% block content %}
     <h1 style="text-align: center;">Published Articles:</h1>
     <ul class="articles">
         {% for article in articles %}
@@ -17,5 +20,6 @@
             </li>
         {% endfor %}
     </ul>
+    {% endblock %}
 </body>
 </html>
