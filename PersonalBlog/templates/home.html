@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home- Personal Blog</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <h1 style="text-align: center;">Published Articles:</h1>
+    <ul class="articles">
+        {% for article in articles %}
+            <li>
+                <a href="/article/{{ article.id }}">
+                    <strong>{{ article.title }}</strong>
+                </a> 
+                <em>(Published on {{ article.date }})</em>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

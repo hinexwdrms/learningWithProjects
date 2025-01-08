@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ article.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="article-content">
+        <h1>{{ article.title }}</h1>
+        <h4><em>Published on {{ article.date }}</em></h4>
+        <p>{{ article.content }}</p>
+    </div>
+    <a href="/home" class = "article-button">Back to Home</a>
+</body>
+</html>

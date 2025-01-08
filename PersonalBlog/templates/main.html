@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Blog</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <nav class="nav-links">
+        <ul class="menu">
+            <li><a href="/home" target="content-frame">Home</a></li>
+            <li><a href="/about" target="content-frame">About</a></li>
+        </ul>
+        <h1 class="heading">Personal Blog</h1>
+        <ul class="login">
+            <li><a href="/login" target="content-frame">Login</a></li>
+        </ul>
+    </nav>
+    <div class="main-content">
+        <iframe name="content-frame" src="/about"></iframe>
+    </div>
+    <footer class="main-footer">
+        <ul>
+            <li>Sarbesh Bhandari</li>
+            <li>&copy; 2021 Personal Blog</li>
+        </ul>    
+    </footer>
+</body>
+</html>

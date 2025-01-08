@@ -1,0 +1,266 @@
+/* General Body and Global Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+/* Navigation Bar */
+.nav-links {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space out the left, center, and right sections */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px; /* Padding around the navbar */
+    background-color: #333; /* Navbar background */
+    height: 30px; /* Adjust navbar height */
+}
+
+/* Menu Links (Left-aligned) */
+.nav-links .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links .menu li {
+    margin-right: 20px; /* Space between menu items */
+}
+
+.nav-links .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav-links .menu a:hover {
+    background-color: #555;
+    text-decoration: underline;
+}
+
+/* Heading (Center-aligned) */
+.nav-links .heading {
+    flex-grow: 1; /* Allow the heading to take up available space */
+    text-align: center; /* Center the heading */
+    justify-content: center; /* Center the text horizontally */
+    color: white;
+    font-size: 1.5em;
+    margin-right: 100px;/* --imperfect-- Space between heading and login links*/
+}
+
+/* Login Link (Right-aligned) */
+.nav-links .login {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links .login a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.nav-links .login a:hover {
+    background-color: #555;
+    text-decoration: underline;
+}
+
+
+/* Main Content */
+.main-content {
+    margin: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh; /* Adjust iframe height */
+    border: 2px solid #333;
+    display: block;
+}
+
+
+/* Footer Section */
+.main-footer {
+    background-color: #333; /* Dark footer background */
+    color: white; /* White text for contrast */
+    padding: 20px 0; /* Padding for footer */
+    text-align: center;
+}
+
+.main-footer ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the footer items */
+    gap: 20px; /* Space between items */
+    list-style: none; /* Remove bullets */
+}
+
+.main-footer li {
+    font-size: 0.9rem; /* Smaller footer text */
+    opacity: 0.8; /* Subtle transparency */
+}
+
+.main-footer li:hover {
+    opacity: 1; /* Full opacity on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+/* About Content Section */
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center;
+    padding: 20px;
+}
+
+.about-content h1 {
+    margin-top: 20vh;
+    font-size: 2.5rem; /* Larger heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit width for better readability */
+    color: #555; /* Slightly lighter text color */
+}
+
+
+/* Articles in home page */
+.articles {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+.articles li {
+    background: white;
+    margin: 10px 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.articles li a{
+    text-decoration: none;
+    color: #333;
+}
+.articles li strong {
+    display: block;
+    font-size: 18px;
+}
+
+.articles li em {
+    font-size: 14px;
+    color: #888;
+}
+
+
+
+/* Login Form */
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #333;
+    border-radius: 30px;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px; /* Adjust the width as needed */
+}
+
+.login-form h1 {
+    width: 90%;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top:20px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Button Styles */
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+/*article page*/
+.article-content {
+    padding: 20px;
+}
+
+.article-content h1 {
+    margin-top: 20px;
+    font-size: 2.5rem; /* Larger heading */
+    color: #333; /* Dark color for the heading */
+}
+
+.article-content em{
+    color: #888;
+}
+
+.article-content p {
+    font-size: 1.2rem;
+    margin-top: 10px; /* Space between paragraphs */
+    line-height: 1.6; /* Improve readability */
+    max-width: 800px; /* Limit width for better readability */
+    margin-left: auto;
+    margin-right: auto;
+    color: #555; /* Slightly lighter text color */
+}
+
+.article-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.article-button:hover {
+    background-color: #45a049;
+}
