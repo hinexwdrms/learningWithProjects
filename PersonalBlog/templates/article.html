@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    {% extends "main.html" %}
+    {% extends "home.html" %}
 
     {% block content %}
     <div class="article-content">
@@ -14,13 +14,14 @@
         <h4><em>Published on {{ article.date }}</em></h4>
         <p>{{ article.content }}</p>
     </div>
-    <a href="/home" class="article-button">Back to Home</a>
 
+    <div class="article-buttons-container">
+        <a href="/home" class="home-button">Back to Home</a>
     {% if logged_in %}
-        <a href="/edit/{{ article.id }}" class="article-button">Edit Article</a>
-        <a href="/delete/{{ article.id }}" class="article-button">Delete Article</a>
+        <a href="/edit/{{ article.id }}" class="article-admin-button">Edit Article</a>
+        <a href="/delete/{{ article.id }}" class="article-admin-button">Delete Article</a>
     {% endif %}
-
+    </div>
     {% endblock %}
 </body>
 </html>
