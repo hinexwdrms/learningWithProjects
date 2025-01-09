@@ -20,6 +20,9 @@
             </li>
         {% endfor %}
     </ul>
+    {% if logged_in %}
+        <a href="/new-article" class="new-article-button">Create a new article</a>
+    {% endif %}
     {% endblock %}
 </body>
 </html>

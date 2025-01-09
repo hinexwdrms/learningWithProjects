@@ -61,7 +61,8 @@ def login():
 
 @app.route('/logout')
 
-def logout():
+def logout(): #will learn js later to add confirmation alert.
+
     # Remove the logged_in key from the session
     session.pop("logged_in", None)  # This will log out the user by clearing the session
 
@@ -84,6 +85,8 @@ def view_article(article_id): # The argument is passed to the function
 
     # Render the article page
     return render_template("article.html", article=article, logged_in=session.get("logged_in", False))
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

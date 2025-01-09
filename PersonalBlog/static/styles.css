@@ -72,10 +72,14 @@ html, body {
 
 /* Main Content */
 .main-content {
-    margin: 20px;
-    height: 80vh; /* Adjust iframe height */
+    margin: 20px auto; /* Center the content */
+    height: 80vh; /* Adjust height */
     border: 2px solid #333;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Add padding for internal spacing */
+    box-sizing: border-box; /* Include padding in height/width calculation */
+    max-width: 1400px; /* Prevent overly wide content */
 }
 
 
@@ -172,14 +176,14 @@ html, body {
     flex-direction: column;
     border: 1px solid #333;
     border-radius: 30px;
-    margin-top: 10vh;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 400px; /* Adjust the width as needed */
+    margin: 10vh auto; /* Center vertically and horizontally */
+    padding: 20px; /* Add padding for better spacing */
+    width: 400px; /* Adjust the width as needed */
+    box-sizing: border-box; /* Include padding in height/width calculation */
 }
 
 .login-form h1 {
-    width: 90%;
+    width: 100%; /* Match parent width */
     background-color: #4CAF50;
     color: white;
     text-align: center;
@@ -188,21 +192,24 @@ html, body {
 
 .form-group {
     margin-bottom: 15px;
+    width: 100%; /* Ensure fields are aligned */
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    margin-top:20px;
+    margin-top: 20px;
     font-weight: bold;
 }
 
 input[type="text"],
 input[type="password"] {
     padding: 10px;
+    width: 100%; /* Ensure full width */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    box-sizing: border-box; /* Prevent overflow */
 }
 
 /* Button Styles */
@@ -213,50 +220,102 @@ input[type="password"] {
     border: none;
     border-radius: 5px;
     font-size: 16px;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 20px 0; /* Simplify vertical margins */
+    cursor: pointer; /* Add pointer for better UX */
+    transition: background-color 0.3s; /* Smooth hover effect */
 }
 
 .login-button:hover {
     background-color: #45a049;
 }
 
-/*article page*/
+/* Article Page */
 .article-content {
+    height: 60vh;
     padding: 20px;
+    box-sizing: border-box; /* Prevent overflow */
+    overflow-y: auto; /* Enable scrolling for overflow content */
 }
 
 .article-content h1 {
     margin-top: 20px;
     font-size: 2.5rem; /* Larger heading */
     color: #333; /* Dark color for the heading */
+    text-align: center; /* Center the heading */
 }
 
-.article-content em{
+.article-content em {
     color: #888;
 }
 
 .article-content p {
     font-size: 1.2rem;
-    margin-top: 10px; /* Space between paragraphs */
+    margin: 30px auto; /* Space between paragraphs, center text */
     line-height: 1.6; /* Improve readability */
-    max-width: 800px; /* Limit width for better readability */
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1200px; /* Limit width for better readability */
     color: #555; /* Slightly lighter text color */
 }
 
-.article-button {
+
+/* Buttons */
+.new-article-button {
     background-color: #4CAF50;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;;
-    margin-left: 20px;
+    font-size: 16px;
     text-decoration: none;
+    margin: auto auto;
+    margin-bottom: 30px;
+    cursor: pointer; /* Add pointer for better UX */
+    text-align: center;
+    width: fit-content; /* Auto-adjust width to content */
+    transition: background-color 0.3s; /* Smooth hover effect */
 }
 
-.article-button:hover {
+.article-buttons-container {
+    display: flex; /* Arrange buttons in a row */
+    justify-content: center; /* Center buttons horizontally */
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: auto; /* Push container to the bottom */
+}
+
+.home-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    cursor: pointer; /* Add pointer for better UX */
+    text-align: center;
+    width: fit-content; /* Auto-adjust width to content */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.article-admin-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-right: 30px;
+    cursor: pointer; /* Add pointer for better UX */
+    text-align: center;
+    width: fit-content; /* Auto-adjust width to content */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.article-button:hover,
+.article-admin-button:hover,
+.new-article-button:hover {
     background-color: #45a049;
 }
