@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Article</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+    <div class="edit-article">
+        <h1>Edit Article</h1>
+        <form action="/edit/{{article.id}}" method="POST">
+            <div class = "title-group">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title" value = "{{article.title}}"><br>
+            </div>
+            <div class = "content-group">
+                <label for="content">Content:</label><br>
+                <textarea id="content" name="content">{{article.content}}</textarea><br>
+            </div>
+            <div class = "edit-buttons">
+            <a href="/article/{{ article.id }}" class="edit-button">Cancel</a>
+            <input type="submit" value="Confirm" class="edit-button">
+            </div>
+        </form>
+    </div>
+    <a href="/home" class="home-button">Back to Home</a>
+    {% endblock %}
+</body>
+</html>

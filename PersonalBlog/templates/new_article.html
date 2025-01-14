@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>New Article</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<body>
+    {% extends "main.html" %}
+    {% block content %}
+    <div class="new-article">
+        <h1>New Article</h1>
+        <form action="/new_article" method="post">
+            <div class = "title-group">
+                <label for="title">Title:</label><br>
+                <input type="text" id="title" name="title"><br>
+            </div>
+            <div class = "content-group">
+                <label for="content">Content:</label><br>
+                <textarea id="content" name="content"></textarea><br>
+            </div>
+            <input type="submit" value="Submit" class="article-submit-button">
+        </form>
+    </div>
+    <a href="/home" class="home-button">Back to Home</a>
+    {% endblock %}
+</body>
+</html>
