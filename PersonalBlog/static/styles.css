@@ -80,6 +80,7 @@ html, body {
     padding: 10px; /* Add padding for internal spacing */
     box-sizing: border-box; /* Include padding in height/width calculation */
     max-width: 1400px; /* Prevent overly wide content */
+    overflow-y: scroll; /* Ensure vertical scrolling  ----------cool-------- */
 }
 
 
@@ -292,6 +293,7 @@ input[type="password"] {
     margin-right: auto;
     margin-bottom: 30px;
     margin-left: 30px;
+    margin-top: auto;
     cursor: pointer; /* Add pointer for better UX */
     text-align: center;
     width: fit-content; /* Auto-adjust width to content */
@@ -318,4 +320,93 @@ input[type="password"] {
 .article-admin-button:hover,
 .new-article-button:hover {
     background-color: #45a049;
+}
+
+/* Edit Article Page & New Article Page*/
+
+.new-article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.new-article form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+.title-group {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    width: 100%; /* Ensure fields are aligned */
+}
+
+.title-group label {
+    margin-right: 20px;
+}
+
+.content-group {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100%; /* Ensure full width */    
+    font-size: 14px;
+}
+
+.content-group textarea {
+    height: 150px;
+}
+
+.article-submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Add pointer for better UX */
+    transition: background-color 0.3s; /* Smooth hover effect */
+
+}
+
+.edit-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-article form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+}
+
+
+.edit-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.edit-button {
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; /* Add pointer for better UX */
+    transition: background-color 0.3s; /* Smooth hover effect */
+    margin: 20px;
 }

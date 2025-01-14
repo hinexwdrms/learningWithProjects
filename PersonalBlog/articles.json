@@ -15,7 +15,12 @@
         "id": 3,
         "title": "Rediscovering Joy in Simple Things",
         "date": "2025-01-03",
-        "content": "In a fast-paced world, it's easy to overlook the simple joys that surround us. A warm cup of tea on a chilly morning, the laughter of loved ones, or the beauty of a sunset—these moments remind us of life's true treasures. Take a moment today to pause, breathe, and appreciate the small blessings that bring light to our lives. Happiness, after all, often resides in the simplest of things."
+        "content": "In a fast-paced world, it's easy to overlook the simple joys that surround us. A warm cup of tea on a chilly morning, the laughter of loved ones, or the beauty of a sunset\u00e2\u20ac\u201dthese moments remind us of life's true treasures. Take a moment today to pause, breathe, and appreciate the small blessings that bring light to our lives. Happiness, after all, often resides in the simplest of things."
+    },
+    {
+        "id": 4,
+        "title": "Edit article function",
+        "content": "Im trying to implement the edit article function. Does it work? Yes it does!\r\nLets try once more!",
+        "date": "2025-01-14"
     }
 ]
-    

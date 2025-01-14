@@ -19,7 +19,10 @@
         <a href="/home" class="home-button">Back to Home</a>
     {% if logged_in %}
         <a href="/edit/{{ article.id }}" class="article-admin-button">Edit Article</a>
-        <a href="/delete/{{ article.id }}" class="article-admin-button">Delete Article</a>
+        <!-- Delete Article button should be a form that submits a POST request -->
+        <form action="/delete/{{ article.id }}" method="POST" style="display: inline;">
+            <button type="submit" class="article-admin-button">Delete Article</button>
+        </form>
     {% endif %}
     </div>
     {% endblock %}
