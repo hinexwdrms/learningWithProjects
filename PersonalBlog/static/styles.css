@@ -3,8 +3,9 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: auto;
-    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Make body a flex container */
 }
 
 
@@ -15,10 +16,9 @@ html, body {
     align-items: center; /* Center vertically */
     padding: 10px 20px; /* Padding around the navbar */
     background-color: #333; /* Navbar background */
-    height: 30px; /* Adjust navbar height */
+    height: 40px; /* Adjust navbar height */
 }
 
-/* Menu Links (Left-aligned) */
 .nav-links .menu {
     list-style: none;
     padding: 0;
@@ -48,7 +48,7 @@ html, body {
     justify-content: center; /* Center the text horizontally */
     color: white;
     font-size: 1.5em;
-    margin-right: 100px;/* --imperfect-- Space between heading and login links*/
+
 }
 
 /* Login Link (Right-aligned) */
@@ -71,14 +71,15 @@ html, body {
 
 
 /* Main Content */
-.main-content {
-    margin: 20px auto; /* Center the content */
-    height: 80vh; /* Adjust height */
+.main-content { 
+    flex: 1; /* Allow content to take up remaining space */
+    margin: 20px auto; /* Center content horizontally */
     border: 2px solid #333;
     display: flex;
     flex-direction: column;
     padding: 10px; /* Add padding for internal spacing */
     box-sizing: border-box; /* Include padding in height/width calculation */
+    width:100%;
     max-width: 1400px; /* Prevent overly wide content */
     overflow-y: scroll; /* Ensure vertical scrolling  ----------cool-------- */
 }
@@ -86,10 +87,14 @@ html, body {
 
 /* Footer Section */
 .main-footer {
+    flex-shrink: 0; /* Prevent footer from shrinking */
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center the footer content */
     background-color: #333; /* Dark footer background */
     color: white; /* White text for contrast */
-    padding: 20px 0; /* Padding for footer */
-    text-align: center;
+    padding: 10px;
+    width: 100%; /* Full width footer */
 }
 
 .main-footer ul {
